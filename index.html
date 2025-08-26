@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Start Serviços — Soluções Industriais e Serviços</title>
+  <meta name="description" content="Start Serviços — Consultoria e serviços industriais: usinagem, manutenção, montagem, obras civis, transporte e muito mais. Sede: Manaus - AM. CNPJ: 37.316.838/0001-07.">
+  <meta name="keywords" content="Start Serviços, manutenção industrial, usinagem, montagem, obras civis, Manaus">
+  <meta name="author" content="Start Serviços">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23003366'/><text x='50' y='58' font-size='48' text-anchor='middle' fill='white' font-family='Arial'>S</text></svg>">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Start Serviços — Soluções Industriais e Serviços">
+  <meta property="og:description" content="Consultoria e serviços industriais: usinagem, manutenção, montagem, obras civis, transporte e muito mais.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Theme color for mobile chrome -->
+  <meta name="theme-color" content="#003366">
+
+  <!-- Schema.org JSON-LD (Organization + LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Start Serviços",
+    "legalName": "Start Serviços LTDA",
+    "url": "https://example.com",
+    "logo": "https://example.com/logo.png",
+    "telephone": "+55 92 00000-0000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Georgia, 14, Conj. Nova Cidade",
+      "addressLocality": "Manaus",
+      "addressRegion": "AM",
+      "postalCode": "69097-388",
+      "addressCountry": "BR"
+    },
+    "sameAs": [],
+    "description": "Atividades de consultoria em gestão empresarial (M-7020-4/00) e serviços industriais e de construção.",
+    "openingHours": "Mo-Fr 08:00-18:00",
+    "priceRange": "$$"
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0b0b0b; /* black base */
+      --card:#111111; /* dark card */
+      --muted:#9aa3ad; /* gray */
+      --accent:#0b66cc; /* blue */
+      --accent-2:#0057b8;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      --max-w:1200px;
+      --transition:200ms cubic-bezier(.2,.8,.2,1);
+    }
+    /* Light mode overrides (will be toggled via JS) */
+    :root[data-theme='light']{
+      --bg:#f4f6f8;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --glass: rgba(0,0,0,0.03);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:#e6eef8;}
+    [data-theme='light'] body{color:#0b1724}
+    .container{max-width:var(--max-w);margin:0 auto;padding:28px}
+
+    header{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:white}
+    .brand h1{margin:0;font-size:18px}
+    .meta{font-size:12px;color:var(--muted)}
+
+    nav{display:flex;gap:12px;align-items:center}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:inherit;cursor:pointer;transition:all var(--transition)}
+    .btn:hover{transform:translateY(-3px)}
+    .primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;color:white}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center;padding:28px 0}
+    .hero .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:var(--radius)}
+    h2{margin:0 0 8px 0;color:var(--accent)}
+    p.lead{color:var(--muted);margin:0 0 16px 0}
+
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+    .service{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 4px 12px rgba(2,6,23,0.5)}
+    .service h3{margin:0 0 6px 0;color:#fff}
+    .service p{margin:0;color:var(--muted);font-size:14px}
+
+    .two-column{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:18px}
+    .map{height:300px;border-radius:10px;overflow:hidden}
+
+    .testimonials{position:relative;padding:18px;background:var(--card);border-radius:var(--radius)}
+    .carousel{display:flex;overflow:hidden}
+    .slide{min-width:100%;padding:10px;transition:transform 300ms ease}
+    .controls{display:flex;gap:8px;justify-content:center;margin-top:12px}
+
+    form{display:grid;gap:10px}
+    input,textarea,select{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+    input:focus,textarea:focus{outline:2px solid rgba(11,102,204,0.15)}
+    .error{color:#ffb4b4;font-size:13px}
+
+    footer{margin-top:32px;padding:20px 0;color:var(--muted);font-size:14px}
+
+    /* back to top */
+    #topBtn{position:fixed;right:18px;bottom:18px;background:var(--accent);border:none;color:white;padding:12px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,0.4);display:none;cursor:pointer}
+
+    /* loading overlay */
+    #loading{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:9999}
+    .spinner{width:72px;height:72px;border-radius:50%;border:6px solid rgba(255,255,255,0.06);border-top-color:var(--accent);animation:spin 1s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    /* small screens */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .two-column{grid-template-columns:1fr}
+      .brand h1{font-size:16px}
+    }
+
+    /* microinteractions */
+    a[role='button']{transition:transform var(--transition)}
+    a[role='button']:hover{transform:translateY(-3px)}
+  </style>
+</head>
+<body>
+  <div id="loading" aria-hidden="true">
+    <div style="text-align:center">
+      <div class="spinner" aria-hidden="true"></div>
+      <div style="margin-top:12px;color:var(--muted)">Carregando Start Serviços...</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">S</div>
+        <div>
+          <h1>Start Serviços</h1>
+          <div class="meta">CNPJ: 37.316.838/0001-07 • Manaus - AM</div>
+        </div>
+      </div>
+
+      <nav aria-label="principal">
+        <button class="btn" id="themeToggle" aria-pressed="false">Modo claro</button>
+        <a class="btn" href="#contato">Contato</a>
+        <a class="btn primary" href="#servicos">Nossos Serviços</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card" role="region" aria-labelledby="heroTitle">
+          <h2 id="heroTitle">Soluções completas em serviços industriais e de construção</h2>
+          <p class="lead">Consultoria em gestão empresarial, usinagem, manutenção, montagem de estruturas, obras civis, transporte e serviços de apoio. Atuando com segurança técnica e entrega pontual.</p>
+          <div class="services" id="servicos">
+            <article class="service" aria-labelledby="s1"><h3 id="s1">Usinagem & Solda</h3><p>Serviços de usinagem, solda, tratamento e revestimento em metais (C-2539-0/01).</p></article>
+            <article class="service" aria-labelledby="s2"><h3 id="s2">Manutenção Industrial</h3><p>Manutenção e reparação de máquinas e equipamentos (C-3314-7/07).</p></article>
+            <article class="service" aria-labelledby="s3"><h3 id="s3">Montagem Industrial</h3><p>Montagem de instalações e estruturas metálicas; instalações hidráulicas e HVAC.</p></article>
+            <article class="service" aria-labelledby="s4"><h3 id="s4">Obras Civis</h3><p>Obras de engenharia civil e acabamento, serviços especializados de construção.</p></article>
+          </div>
+
+          <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn" href="#depoimentos">Depoimentos</a>
+            <a class="btn" href="#mapa">Localização</a>
+            <a class="btn primary" href="#contato">Solicitar Orçamento</a>
+          </div>
+        </div>
+
+        <aside class="card" aria-labelledby="infoTitle">
+          <h3 id="infoTitle">Informações Rápidas</h3>
+          <p class="meta">Atividade principal: <strong>M-7020-4/00</strong> — Consultoria em gestão empresarial</p>
+          <p class="meta" style="margin-top:8px">Capital Social: R$1.000.000,00<br>Tempo de atividade: 5 anos</p>
+
+          <div style="margin-top:12px">
+            <h4 style="margin:6px 0">Canais</h4>
+            <p class="meta">Rua Georgia, 14, Conj. Nova Cidade, Manaus - AM</p>
+            <p class="meta">Telefone: +55 92 00000-0000</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="two-column">
+        <div>
+          <div class="testimonials" id="depoimentos">
+            <h3>Depoimentos</h3>
+            <div class="carousel" id="carousel" aria-live="polite">
+              <div class="slide" data-index="0">
+                <blockquote>
+                  "Excelente serviço de manutenção — equipe técnica qualificada e entrega dentro do prazo."<br>
+                  <cite>— Empresa XYZ</cite>
+                </blockquote>
+              </div>
+              <div class="slide" data-index="1" aria-hidden="true">
+                <blockquote>
+                  "Profissionalismo e segurança nas obras de instalação — recomendo."<br>
+                  <cite>— Indústria ABC</cite>
+                </blockquote>
+              </div>
+              <div class="slide" data-index="2" aria-hidden="true">
+                <blockquote>
+                  "Ótimo atendimento e pós-venda. Solicitamos mais projetos."<br>
+                  <cite>— Construtora LMN</cite>
+                </blockquote>
+              </div>
+            </div>
+            <div class="controls" aria-hidden="false">
+              <button class="btn" id="prev">◀</button>
+              <button class="btn" id="next">▶</button>
+            </div>
+          </div>
+
+          <div style="margin-top:18px" class="card">
+            <h3>Melhorias e Performance</h3>
+            <ul style="color:var(--muted);font-size:14px">
+              <li>Imagens otimizadas: use WebP/AVIF em produção e compressão.</li>
+              <li>Minificar CSS/JS em build (ex.: terser, csso).</li>
+              <li>Lazy-loading para imagens (loading="lazy").</li>
+              <li>Implementado modo claro/escuro com persistência.</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card" id="mapa">
+            <h3>Localização</h3>
+            <!-- add a real Maps embed in production (Google Maps / OpenStreetMap) -->
+            <div class="map" role="img" aria-label="Mapa — Rua Georgia, Manaus">
+              <iframe 
+                src="https://www.google.com/maps?q=Rua+Georgia+14+Manaus+AM&output=embed" 
+                width="100%" height="100%" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p class="meta" style="margin-top:8px">Rua Georgia, 14, Conj. Nova Cidade — Manaus - AM</p>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h3>Serviços de Transporte</h3>
+            <p class="meta">Transporte rodoviário e cabotagem; logística integrada.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="card" style="margin-top:18px" id="contato">
+        <h3>Solicite um Orçamento</h3>
+        <form id="contactForm" novalidate>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <input type="text" id="nome" name="nome" placeholder="Nome completo" required aria-required="true">
+            <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required aria-required="true">
+          </div>
+          <input type="email" id="email" name="email" placeholder="E-mail" required>
+          <select id="assunto" name="assunto" required>
+            <option value="">Selecione o serviço</option>
+            <option>Usinagem & Solda</option>
+            <option>Manutenção Industrial</option>
+            <option>Montagem/Instalações</option>
+            <option>Obras Civis</option>
+          </select>
+          <label for="mensagem" style="font-size:13px;color:var(--muted)">Descreva brevemente o projeto</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Detalhes..." required></textarea>
+          <div style="display:flex;gap:8px;align-items:center">
+            <button class="btn primary" type="submit">Enviar</button>
+            <div id="formMsg" style="color:var(--muted)"></div>
+          </div>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div>
+          <strong>Start Serviços</strong> • CNPJ: 37.316.838/0001-07<br>
+          Rua Georgia, 14 — Nova Cidade, Manaus - AM
+        </div>
+        <div style="text-align:right">© 2025 Start Serviços — Todos os direitos reservados</div>
+      </div>
+    </footer>
+  </div>
+
+  <button id="topBtn" aria-label="Voltar ao topo">↑</button>
+
+  <script>
+    /***** Helper & initial states *****/
+    (function(){
+      // Remove loading after small delay to show animation
+      window.addEventListener('load',()=>{
+        const ld=document.getElementById('loading');
+        setTimeout(()=>{ld.style.display='none'},400);
+      });
+
+      // Theme: persist preference
+      const root=document.documentElement;
+      const themeToggle=document.getElementById('themeToggle');
+      const saved=localStorage.getItem('start_theme')||(window.matchMedia && window.matchMedia('(prefers-color-scheme:light)').matches? 'light':'dark');
+      root.setAttribute('data-theme', saved);
+      themeToggle.textContent = saved==='light'? 'Modo escuro' : 'Modo claro';
+      themeToggle.setAttribute('aria-pressed', saved==='light');
+
+      themeToggle.addEventListener('click', ()=>{
+        const next = root.getAttribute('data-theme')==='light' ? 'dark' : 'light';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('start_theme', next);
+        themeToggle.textContent = next==='light'? 'Modo escuro' : 'Modo claro';
+        themeToggle.setAttribute('aria-pressed', next==='light');
+      });
+
+      // Back to top
+      const topBtn=document.getElementById('topBtn');
+      window.addEventListener('scroll',()=>{
+        if(window.scrollY>300) topBtn.style.display='block'; else topBtn.style.display='none';
+      });
+      topBtn.addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+      // Simple carousel
+      const slides = document.querySelectorAll('.slide');
+      let cur = 0;
+      const show = idx =>{
+        slides.forEach((s,i)=>{
+          s.style.transform = `translateX(${(i-idx)*100}%)`;
+          s.setAttribute('aria-hidden', i!==idx);
+        });
+      };
+      show(0);
+      document.getElementById('prev').addEventListener('click', ()=>{cur=(cur-1+slides.length)%slides.length; show(cur)});
+      document.getElementById('next').addEventListener('click', ()=>{cur=(cur+1)%slides.length; show(cur)});
+
+      // Auto-advance carousel every 7s
+      setInterval(()=>{cur=(cur+1)%slides.length; show(cur)},7000);
+
+      // Form validation + fake submit (replace with real endpoint)
+      const form=document.getElementById('contactForm');
+      const formMsg=document.getElementById('formMsg');
+      form.addEventListener('submit', e=>{
+        e.preventDefault();
+        formMsg.textContent='';
+        // simple validation
+        const nome=document.getElementById('nome');
+        const telefone=document.getElementById('telefone');
+        const email=document.getElementById('email');
+        const mensagem=document.getElementById('mensagem');
+        if(!nome.value.trim()||!telefone.value.trim()||!email.value.trim()||!mensagem.value.trim()){
+          formMsg.textContent='Por favor, preencha todos os campos.'; formMsg.className='error'; return;
+        }
+        // basic email check
+        if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){
+          formMsg.textContent='E-mail inválido.'; formMsg.className='error'; return;
+        }
+// simulate send
+        formMsg.textContent='Enviando...'; formMsg.className='';
+        setTimeout(()=>{
+          formMsg.textContent='Mensagem enviada com sucesso! Responderemos em até 48h.'; formMsg.className='';
+          form.reset();
+        },900);
+      });
+
+      // Accessibility: allow left/right arrows to change slides
+      document.addEventListener('keydown', e=>{
+        if(e.key==='ArrowLeft'){ document.getElementById('prev').click(); }
+        if(e.key==='ArrowRight'){ document.getElementById('next').click(); }
+      });
+
+      // Lazy-load suggestion: all <img> should have loading="lazy" and modern formats
+      // In production: serve WebP/AVIF and provide fallbacks.
+
+      // Performance notes printed to console (devs)
+      console.info('Start Serviços — site carregado. Dicas: gerar assets WebP/AVIF, minificar CSS/JS, ativar caching e usar CDN para imagens.');
+
+      // Simple focus outlines for keyboard users
+      document.body.addEventListener('keydown', e=>{ if(e.key==='Tab') document.documentElement.style.setProperty('--focus','outline'); });
+    })();
+  </script>
+</body>
+</html>
